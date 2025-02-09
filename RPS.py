@@ -6,7 +6,7 @@ clock = pygame.time.Clock()
 
 bg = pygame.image.load("bg.svg")
 tie = pygame.image.load("Tie.png")
-win = pygame.image.load("Win.png")
+win_bg = pygame.image.load("Win.png")
 lose = pygame.image.load("Lose.png")
 s = pygame.display.set_mode((1362, 800))
 pygame.display.set_caption("Rock, Paper, Scissors, Shoot!")
@@ -121,12 +121,12 @@ def game_logic():
         time.sleep(1)
         win = False
     if player == "Rock" and play_indx == 2:
-        s.blit(win, (0,0))
+        s.blit(win_bg, (0,0))
         pygame.display.flip()
         time.sleep(1)
         win = True
     if player == "Paper" and play_indx == 0:
-        s.blit(win, (0,0))
+        s.blit(win_bg, (0,0))
         pygame.display.flip()
         time.sleep(1)
         win = True
@@ -146,7 +146,7 @@ def game_logic():
         time.sleep(1)
         win = False
     if player == "Scissors" and play_indx == 1:
-        s.blit(win, (0,0))
+        s.blit(win_bg, (0,0))
         pygame.display.flip()
         time.sleep(1)
         win = True
